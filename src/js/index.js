@@ -6,6 +6,7 @@ botaoDeBusca.addEventListener("click", async () => {
   if (!cidade) return;
   const dados = await buscarDadosDaCidade(cidade);
   if (dados) preencherDadosNaTela(dados, cidade);
+  document.getElementById("input-busca").value = ""
 });
 
 async function buscarDadosDaCidade(cidade) {
